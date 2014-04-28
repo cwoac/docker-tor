@@ -1,7 +1,6 @@
 FROM ubuntu
 MAINTAINER Patrick O'Doherty <p@trickod.com>
 
-EXPOSE 9001
 ENV VERSION 0.2.4.21
 
 RUN apt-get update
@@ -19,5 +18,8 @@ VOLUME /.tor
 
 # Generate a random nickname for the relay
 RUN echo "Nickname docker$(head -c 16 /dev/urandom  | sha1sum | cut -c1-10)" >> /etc/torrc
+
+EXPOSE 9001
+EXPOSE 9050
 
 CMD /usr/local/bin/tor -f /etc/torrc

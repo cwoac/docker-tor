@@ -1,4 +1,5 @@
 Log notice stdout
 ExitPolicy reject *:*
 ORPort 9001
+SocksPort 0.0.0.0:9050
 
