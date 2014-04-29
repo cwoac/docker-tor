@@ -9,3 +9,5 @@ example usage:
 
     docker build -t cwoac/tor .
     docker run -d -p 0.0.0.0:9001:9001 -p 0.0.0.0:9050:9050 cwoac/tor`
+
+Be aware that this will open up the proxy to anybody who can reach this machine
